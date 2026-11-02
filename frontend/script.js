@@ -5,7 +5,7 @@ async function loadEquipment() {
     const total = document.getElementById("total");
 
     try {
-        const response = await fetch(`${API_URL}/equipment`);
+        const response = await fetch("http://127.0.0.1:5000/api/weapons");
 
         if (!response.ok) {
             throw new Error("Failed to load equipment");
