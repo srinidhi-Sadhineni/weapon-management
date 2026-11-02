@@ -1,5 +1,6 @@
 import os import mysql.connector 
 from flask import Flask, jsonify, request, send_from_directory
+from flask_cors import CORS
 
 BASE_DIR = os.path.dirname(os.path.abspath(file))
 FRONTEND_DIR = os.path.abspath(
