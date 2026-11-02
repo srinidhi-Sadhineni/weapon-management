@@ -1,12 +1,12 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-import mysql.connector
-import os
-from dotenv import load_dotenv
+import os import mysql.connector 
+from flask import Flask, jsonify, request, send_from_directory
 
-load_dotenv()
+BASE_DIR = os.path.dirname(os.path.abspath(file))
+FRONTEND_DIR = os.path.abspath(
+os.path.join(BASE_DIR, "..", "frontend")
+)
 
-app = Flask(__name__)
+app = Flask(name)
 CORS(app)
 
 def get_db_connection():
@@ -20,9 +20,7 @@ def get_db_connection():
 
 @app.route("/")
 def home():
-    return jsonify({
-        "message": "Weapon Management System API is running!"
-    })
+    return send_from_directory(FRONTEND_DIR, "index.html")
 
 @app.route("/equipment")
 def get_equipment():
