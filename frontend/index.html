@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Weapon Management System</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#equipment">Equipment</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Welcome to Weapon Management System</h1>
+            <p>Manage equipment records and inventory information.</p>
+            <a href="#equipment" class="btn">View Equipment</a>
+        </section>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Equipment</h3>
+                    <p id="total">Loading...</p>
+                </div>
+                <div class="card">
+                    <h3>System Status</h3>
+                    <p>Connected</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipment">
+            <h2>Equipment Records</h2>
+            <div id="equipment-list">Loading equipment...</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
