@@ -21,7 +21,7 @@ def get_db_connection():
     )
 
 @app.route("/")
-def home(filename):
+def home():
     return send_from_directory(FRONTEND_DIR, "index.html")
 
 @app.route("/equipment")
