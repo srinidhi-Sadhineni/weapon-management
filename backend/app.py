@@ -18,9 +18,9 @@ def get_db_connection():
         port=int(os.getenv("DB_PORT", 3306))
     )
 
-@app.route("/")
-def home():
-    return send_from_directory(FRONTEND_DIR, "index.html")
+@app.route("/path:filename")
+def home(filename):
+    return send_from_directory(FRONTEND_DIR, filename)
 
 @app.route("/equipment")
 def get_equipment():
