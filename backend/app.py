@@ -8,7 +8,7 @@ FRONTEND_DIR = os.path.abspath(
 os.path.join(BASE_DIR, "..", "frontend")
 )
 
-app = Flask(name)
+app = Flask(__name__)
 CORS(app)
 
 def get_db_connection():
