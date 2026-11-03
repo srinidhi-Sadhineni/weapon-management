@@ -1,11 +1,11 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "";
 
 async function loadEquipment() {
     const equipmentList = document.getElementById("equipment-list");
     const total = document.getElementById("total");
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/weapons");
+        const response = await fetch("/api/weapons");
 
         if (!response.ok) {
             throw new Error("Failed to load equipment");
